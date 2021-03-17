@@ -1990,30 +1990,22 @@ a {
    margin-bottom: 10px;
    font-size: 14px;
    @include breakpoint-min(sm) {
+      display: flex;
+      justify-content: space-between; 
+   }
+   &__dots {
+      flex: 1;
+      overflow: hidden;
+      display: none;
+      @include breakpoint-min(sm) {
+         display: block;
+      }
       &:after {
          content: '........................................................................................................................................................................................................................................................................................................................................................................';
-         display: block;
-         white-space: nowrap;
-         overflow: hidden;
          font-size: 8px;
-         line-height: 35px;
          opacity: .7;
-       }
+      }
    }
- }
-
- .param__prop {
-    display: block;
-   @include breakpoint-min(sm) {
-      float: left;
-   }
- }
- .param__value {
-    display: block;
-   @include breakpoint-min(sm) {
-      float: right;
-   }
-   font-weight: bold;
  }
 
  .holder {

@@ -1936,27 +1936,20 @@ a {
   margin-bottom: 10px;
   font-size: 14px; }
   @media (min-width: 768px) {
-    .param:after {
+    .param {
+      display: flex;
+      justify-content: space-between; } }
+  .param__dots {
+    flex: 1;
+    overflow: hidden;
+    display: none; }
+    @media (min-width: 768px) {
+      .param__dots {
+        display: block; } }
+    .param__dots:after {
       content: '........................................................................................................................................................................................................................................................................................................................................................................';
-      display: block;
-      white-space: nowrap;
-      overflow: hidden;
       font-size: 8px;
-      line-height: 35px;
-      opacity: .7; } }
-
-.param__prop {
-  display: block; }
-  @media (min-width: 768px) {
-    .param__prop {
-      float: left; } }
-
-.param__value {
-  display: block;
-  font-weight: bold; }
-  @media (min-width: 768px) {
-    .param__value {
-      float: right; } }
+      opacity: .7; }
 
 .holder {
   padding: 0;
